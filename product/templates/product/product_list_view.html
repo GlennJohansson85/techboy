@@ -1,16 +1,4 @@
-<!-------------------------------------------------------------------------------    P5/PRODUCT/TEMPLATES/PRODUCT/PRODUCT.HTML    -->
-{% extends "base.html" %}
-
-{{ object_list}}
-
-{% for obj in object_list %}
-
-{{ obj.title }}
-
-{% block title %}Product{% endblock %}
-
-{% block content %}
-<!-- Content for the product page -->
-<h1>Our Products</h1>
-<!-- Product listings or descriptions go here -->
-{% endblock %}
+<!-------------------------------------------------------------------------TECHBOY/PRODUCT/TEMPLATES/PRODUCT/PRODUCT_LIST_VIEW.HTML-->
+{% for product in products %}
+{{ product.title }}<br>
+{% endfor %}
