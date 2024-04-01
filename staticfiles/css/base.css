@@ -1,0 +1,20 @@
+/*__________________________________________________________________TECHBOY/STATIC/CSS/BASE.CSS */
+/* Custom CSS for User Navbar */
+.navbar-user {
+    background-color: #007bff; /* Blue background color */
+}
+
+.navbar-user .navbar-brand,
+.navbar-user .nav-link {
+    color: #ffffff; /* White text color */
+}
+
+/* Custom CSS for Shop Navbar */
+.navbar-shop {
+    background-color: #28a745; /* Green background color */
+}
+
+.navbar-shop .navbar-brand,
+.navbar-shop .nav-link {
+    color: #ffffff; /* White text color */
+}

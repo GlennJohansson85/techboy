@@ -1,0 +1,11 @@
+<!-------------------------------------------------------------------------TECHBOY/PRODUCT/TEMPLATES/PRODUCT/PRODUCT_LIST_VIEW.HTML-->
+{% extends 'base.html' %}
+
+{% block title %}Product List{% endblock %}
+
+{% block content %}
+
+{% for product in products %}
+{{ product.title }}<br>
+{% endfor %}
+{% endblock %}
