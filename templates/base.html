@@ -15,93 +15,161 @@
 <!--CORECSS-->
 {% block corecss %}
     {{ block.super }}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+    <!-- custom -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- lineicons -->
+    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css">  
 {% endblock %}
 
 <!--COREJS-->
 {% block corejs %}
     {{ block.super }}
-        <script src="https://kit.fontawesome.com/6f8277bec5.js" crossorigin="anonymous"></script> <!--Glenns-->
+        <script src="https://kit.fontawesome.com/6f8277bec5.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 {% endblock %}
 
 <!--TITLE-->
 <title>{% block title %}TechBoY{% endblock %}</title>
 </head>
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
 <body>
 <header></header>
-<!--NAVBAR-->
-<nav class="navbar navbar-expand-lg bg-info navbar-dark">
-    <!-- Container wrapper -->
+<!-------------------------------------------------------------------------------------------------------------NAVBAR-->
+<!------------------------------------------------------------------------------------------------TOP NAVBAR-->
+<nav class="navbar navbar-expand-lg bg-info navbar-dark navbar-top">
     <div class="container-fluid">
         <!-- Brand -->
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">TechBoY</a>
+        <a class="navbar-brand" href="#">TechBoY</a>
+
+        <!-- Centered Search Form and Links for top navbar -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContentTop">
+            <div class="col d-flex justify-content-center">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+                        <!-- Font Awesome search icon -->
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
         </div>
 
-        <!-- Navbar toggler button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- Links -->
+        <ul class="navbar-nav ml-auto">
+            <!-- Support -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownSupport" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-headset"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownSupport">
+                    <!-- Dropdown links -->
+                    <a class="dropdown-item" href="#">Dropdown Item 1</a>
+                    <a class="dropdown-item" href="#">Dropdown Item 2</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Another Link</a>
+                </div>
+            </li>
+            <!-- Profile -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownProfile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownProfile">
+                    <a class="dropdown-item" href="#">My Profile</a>
+                    <a class="dropdown-item" href="#">Register</a>
+                    <a class="dropdown-item" href="#">Log out</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Another Link</a>
+                </div>
+            </li>
+            <!-- Cart -->
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">
+                    <i class="fas fa-cart-shopping"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+
+<!----------------------------------------------------------------------------------------------BOTTOM NAVBAR-->
+<nav class="navbar navbar-expand-lg bg-info navbar-dark">
+    <div class="container-fluid">
+         <!-- Toggler button for bottom navbar -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContentBottom" aria-controls="navbarSupportedContentBottom" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Collapsible Navbar Content -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Collapsible Navbar Content for bottom navbar -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContentBottom">
             <!-- Icons -->
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item me-3 me-lg-0">
                     <a class="nav-link text-white" href="{% url 'home' %}">
-                        <i class="fa-solid fa-house"></i> Home
-                    </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="{% url 'products' %}" id="navbarDropdownProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-cog mx-1"></i> Products
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
-                        <!-- Dropdown links -->
-                        <a class="dropdown-item" href="#"></a>
-                        <a class="dropdown-item" href="#">Link 2</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Another Link</a>
-                    </div>
-                </li>
-                <li class="nav-item me-3 me-lg-0">
-                    <a  class="nav-link text-white" href="{% url 'about' %}">
-                        <i class="fas fa-cog mx-1"></i>About
-                    </a>
-                </li>
-                <li class="nav-item me-3 me-lg-0">
-                    <a class="nav-link text-white" href="{% url 'contact' %}">
-                        <i class="fa-solid fa-envelope"></i> Contact
+                        <i class="lni lni-home"></i> Home
                     </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-cog mx-1"></i> Profile
+                        <i class="lni lni-package"></i> Products
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
                         <!-- Dropdown links -->
-                        <a class="dropdown-item" href="#">My Profile</a>
-                        <a class="dropdown-item" href="#">Register</a>
-                        <a class="dropdown-item" href="#">Log out</a>
+                        <div class="dropdown">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownCategory1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Computer
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownCategory1">
+                                <a class="dropdown-item" href="#">PC</a>
+                                <a class="dropdown-item" href="#">Apple</a>
+                                <a class="dropdown-item" href="#">Gaming</a>
+                                <a class="dropdown-item" href="#">Mobiles</a>
+                                <!-- Add more subcategories as needed -->
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownCategory2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Category 2
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownCategory2">
+                                <a class="dropdown-item" href="#">Subcategory 3</a>
+                                <a class="dropdown-item" href="#">Subcategory 4</a>
+                                <!-- Add more subcategories as needed -->
+                            </div>
+                        </div>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Another Link</a>
                     </div>
+                </li>
                 <li class="nav-item me-3 me-lg-0">
-                    <a class="nav-link text-white" href="#">
-                        <i class="fa-solid fa-cart-shopping"></i>
+                    <a class="nav-link text-white" href="{% url 'about' %}">
+                        <i class="lni lni-heart"></i> About
                     </a>
                 </li>
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link text-white" href="{% url 'contact' %}">
+                        <i class="lni lni-envelope"></i> Contact
+                    </a>
+                </li>
+                
             </ul>
         </div>
     </div>
 </nav>
 
+      
 
 
 <!-- Navbar -->

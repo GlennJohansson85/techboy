@@ -1,20 +1,9 @@
 /*__________________________________________________________________TECHBOY/STATIC/CSS/BASE.CSS */
-/* Custom CSS for User Navbar */
-.navbar-user {
-    background-color: #007bff; /* Blue background color */
-}
-
-.navbar-user .navbar-brand,
-.navbar-user .nav-link {
-    color: #ffffff; /* White text color */
-}
-
-/* Custom CSS for Shop Navbar */
-.navbar-shop {
-    background-color: #28a745; /* Green background color */
-}
-
-.navbar-shop .navbar-brand,
-.navbar-shop .nav-link {
-    color: #ffffff; /* White text color */
+/* Custom CSS for the search field */
+#search-form .custom-search-field {
+    width: 800px !important; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    font-size: 16px; /* Adjust the font size as needed */
+    padding: 8px 12px; /* Adjust the padding as needed */
+    /* Add any other custom styles */
 }
