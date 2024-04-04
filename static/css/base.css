@@ -1,21 +1,31 @@
 /*__________________________________________________________________TECHBOY/STATIC/CSS/BASE.CSS */
+/*___________________________________________________BASE */
+/* Apply max width to the body */
 body {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto; /* Center content horizontally */
+}
+
+/* Center the navbar content */
+.navbar-top,
+.navbar-bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-top .container-fluid,
+.navbar-bottom .container-fluid {
+    max-width: 100%; /* Make container fluid full width */
 }
 
 
-/* Custom CSS for the search field */
-    .nav-link.dropdown-toggle::after {
-        display: none;
-    }
+/* removes dropdown arrow*/
+.nav-link.dropdown-toggle::after {
+    display: none;
+}
 
-    /* icon size */
-    .nav-link i {
-        font-size: 24px; 
-    }
 
-    /* space between top navbar icons */
-    .navbar-top .navbar-nav .nav-item .nav-link {
-        margin-right: 30px; 
-    }
+/* icon size */
+.nav-link i {
+    font-size: 24px; 
+}
