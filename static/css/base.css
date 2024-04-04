@@ -1,31 +1,26 @@
 /*__________________________________________________________________TECHBOY/STATIC/CSS/BASE.CSS */
-/*___________________________________________________BASE */
-/* Apply max width to the body */
-body {
+html {
     max-width: 1200px;
-    margin: 0 auto; /* Center content horizontally */
-}
-
-/* Center the navbar content */
-.navbar-top,
-.navbar-bottom {
-    display: flex;
-    justify-content: center;
-}
-
-.navbar-top .container-fluid,
-.navbar-bottom .container-fluid {
-    max-width: 100%; /* Make container fluid full width */
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Ysabeau SC', sans-serif;
+    text-align: center;
 }
 
 
+/*___________________________________________________________________TOP NAVBAR */
 /* removes dropdown arrow*/
 .nav-link.dropdown-toggle::after {
     display: none;
 }
 
+.brand {
+    font-size: 20px;
+}
 
-/* icon size */
-.nav-link i {
-    font-size: 24px; 
+.custom-form-search {
+    width: 400px;
+    margin: 0 auto; 
+    display: flex;
+    align-items: center; 
 }
