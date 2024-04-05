@@ -17,10 +17,3 @@ html {
 .brand {
     font-size: 20px;
 }
-
-.custom-form-search {
-    width: 400px;
-    margin: 0 auto; 
-    display: flex;
-    align-items: center; 
-}

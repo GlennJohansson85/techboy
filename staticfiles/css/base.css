@@ -1,9 +1,0 @@
-/*__________________________________________________________________TECHBOY/STATIC/CSS/BASE.CSS */
-/* Custom CSS for the search field */
-#search-form .custom-search-field {
-    width: 800px !important; /* Adjust the width as needed */
-    height: 40px; /* Adjust the height as needed */
-    font-size: 16px; /* Adjust the font size as needed */
-    padding: 8px 12px; /* Adjust the padding as needed */
-    /* Add any other custom styles */
-}

@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'techboy',
     'home',
     'product',
+    'user',
 ]
 
 MIDDLEWARE = [

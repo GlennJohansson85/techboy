@@ -1,22 +1,32 @@
 #------------------------------------------------------------------------------PRODUCT/VIEWS.PY
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Product
+from .models import Category, Product
+
+
+def product_category(request, category_id):
+    category = Category.objects.get(pk=category_id)
+    products = Product.objects.filter(category=category)
+
+    return render(request, 'product/product_category.html', {'category': category, 'products': products})
+
 
 def products(request):
     """ A view to show all products """
+    categories = Category.objects.all()
     products = Product.objects.all()
     context = {
+        'categories': categories,
         'products': products,
     }
     return render(request, 'product/products.html', context)
 
+
 def product_detail(request, product_id):
     """ A view to show individual product details """
     product = get_object_or_404(Product, pk=product_id)
-    context = {
-        'product': product,
-    }
-    return render(request, 'product/product_detail.html', context)
+
+    return render(request, 'product/product_detail.html', {'product': product})
+
 
 def product_add(request):
     """ A view to add a new product """
@@ -27,6 +37,7 @@ def product_add(request):
         'form': form,
     }
     return render(request, template, context)
+
 
 def product_edit(request, product_id):
     """ A view to edit an existing product """
@@ -40,6 +51,7 @@ def product_edit(request, product_id):
     }
     return render(request, template, context)
 
+
 def product_delete(request, product_id):
     """ A view to delete an existing product """
     product = get_object_or_404(Product, pk=product_id)
@@ -47,4 +59,5 @@ def product_delete(request, product_id):
     # Assuming you're using Django's messages framework
     from django.contrib import messages
     messages.success(request, 'Product deleted!')
+
     return redirect('products')
