@@ -44,18 +44,21 @@
                 <!-- CONTACT -->
                 <li class="nav-item me-4">
                     <a class="nav-link" href="{% url 'contact' %}">
+                        <span>Contact</span>
                         <i class="fas fa-envelope fa-lg"></i>
                     </a>
                 </li>
                 <!-- USER -->
                 <li class="nav-item me-4">
                     <a class="nav-link" href="{% url 'user' %}">
+                        <span>Profile</span>
                         <i class="fas fa-user fa-lg"></i>
                     </a>
                 </li>
                 <!-- CART -->
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'home' %}">
+                        <span>Cart</span>
                         <i class="fas fa-shopping-cart fa-lg"></i>
                     </a>
                 </li>
@@ -64,68 +67,80 @@
     </header>
 
     <!-- BOTTOM NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <!-- TOGGLER BUTTON-->
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <!-- TV -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">TV</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Samsung</a></li>
-                            <li><a class="dropdown-item" href="#">LG</a></li>
-                            <li><a class="dropdown-item" href="#">SONY</a></li>
-                        </ul>
-                    </li>
-                    <!-- COMPUTER -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Computer</a>
-                        <ul class="dropdown-menu">
-                            <!-- LAPTOP -->
-                            <li>
-                                <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Laptop</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Apple</a></li>
-                                    <li><a class="dropdown-item" href="#">Asus</a></li>
-                                </ul>
-                            </li>
-                            <!-- STATIONARY -->
-                            <li>
-                                <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Stationary</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Apple</a></li>
-                                    <li><a class="dropdown-item" href="#">Asus</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- MOBILE -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mobile</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Samsung</a></li>
-                            <li><a class="dropdown-item" href="#">LG</a></li>
-                            <li><a class="dropdown-item" href="#">SONY</a></li>
-                        </ul>
-                    </li>
-                    <!-- CAMERA -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">cameras</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Samsung</a></li>
-                            <li><a class="dropdown-item" href="#">LG</a></li>
-                            <li><a class="dropdown-item" href="#">SONY</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <!-- TOGGLER BUTTON-->
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- NAVIGATION LINKS -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <!-- TV -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-icon" href="#" id="tvDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-tv"></i>
+                        <span>TV</span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="tvDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">OLED</a></li>
+                        <li><a class="dropdown-item" href="#">LED</a></li>
+                        <li><a class="dropdown-item" href="#">NANO-LED</a></li>
+                    </ul>
+                </li>
+                <!-- LAPTOP -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-icon" href="#" id="computerDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-laptop"></i>
+                        <span>Laptops</span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="computerDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">OLED</a></li>
+                        <li><a class="dropdown-item" href="#">LED</a></li>
+                        <li><a class="dropdown-item" href="#">NANO-LED</a></li>
+                    </ul>
+                </li>
+                <!-- PHONES -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-icon" href="#" id="mobileDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-mobile"></i>
+                        <span>Mobiles</span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="mobileDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">OLED</a></li>
+                        <li><a class="dropdown-item" href="#">LED</a></li>
+                        <li><a class="dropdown-item" href="#">NANO-LED</a></li>
+                    </ul>
+                </li>
+                <!-- CAMERAS -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-icon" href="#" id="cameraDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-camera"></i>
+                        <span>Cameras</span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="cameraDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">OLED</a></li>
+                        <li><a class="dropdown-item" href="#">LED</a></li>
+                        <li><a class="dropdown-item" href="#">NANO-LED</a></li>
+                    </ul>
+                </li>
+                <!-- GAMING -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-icon" href="#" id="cameraDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="lni lni-game"></i>
+                        <span>Gaming</span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="cameraDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">OLED</a></li>
+                        <li><a class="dropdown-item" href="#">LED</a></li>
+                        <li><a class="dropdown-item" href="#">NANO-LED</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
 
     <!-- Main content block -->
     <div class="container">
