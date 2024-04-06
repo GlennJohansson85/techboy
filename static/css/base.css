@@ -1,33 +1,38 @@
-/*__________________________________________________________________TECHBOY/STATIC/CSS/BASE.CSS */
+/*__________________________________________________________________________________   TECHBOY/STATIC/CSS/BASE.CSS */
 html {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
-
-/*___________________________________________________________________TOP NAVBAR */
-/* removes dropdown arrow*/
+/*_________________________________________________________________________   NAVBAR */
 .nav-link.dropdown-toggle::after {
-    display: none;
+    display: none; /*___________   Remove dropdown arrow */
 }
 
-.brand {
-    font-size: 20px;font-size: 24px;/*___________________________   Icon Size */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:hover .fas {
+    color: #FFA500; /*________   Icon Hover Colour */
 }
 
 
-/*___________________________________________________________________BOTTOM NAVBAR */
+/*__________________________________________________________  TOP NAVBAR */
+.navbar-nav .nav-link .fas {
+    font-size: 30px; /*__________   Icon Size */
+}
+
+
+/*_________________________________________________________   BOTTOM NAVBAR */
 
 .nav-icon i {
-    font-size: 24px;/*___________________________   Icon Size */
-    margin: 0;/*_________________________________   Margin around the icon */
+    font-size: 24px; /*__________   Icon Size */
+    margin: 0; /*________________   Margin around the icon */
 }
 
 .nav-icon span {
-    font-size: 12px;/*___________________________   Text Size next to icon */  
+    font-size: 12px; /*__________   Text Size next to icon */  
 }
 
 .dropdown-item {
-    font-size: 12px;/*____________________________  Text Size in dropdown Note: Affect top navbar also */ 
+    font-size: 12px; /*__________  Text Size in dropdown Note: Affect top navbar also */ 
 }
