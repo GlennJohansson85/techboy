@@ -3,8 +3,6 @@ html {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Ysabeau SC', sans-serif;
-    text-align: center;
 }
 
 
@@ -15,22 +13,21 @@ html {
 }
 
 .brand {
-    font-size: 20px;
+    font-size: 20px;font-size: 24px;/*___________________________   Icon Size */
 }
 
 
 /*___________________________________________________________________BOTTOM NAVBAR */
-.nav-icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
 
 .nav-icon i {
-    font-size: 24px;
+    font-size: 24px;/*___________________________   Icon Size */
+    margin: 0;/*_________________________________   Margin around the icon */
 }
 
 .nav-icon span {
-    font-size: 12px;
+    font-size: 12px;/*___________________________   Text Size next to icon */  
+}
+
+.dropdown-item {
+    font-size: 12px;/*____________________________  Text Size in dropdown Note: Affect top navbar also */ 
 }
