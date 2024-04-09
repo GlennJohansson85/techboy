@@ -1,62 +1,111 @@
 /*__________________________________________________________________________________   TECHBOY/STATIC/CSS/BASE.CSS */
+/*_____________________________________________________________________   OVERALL */
 html {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: #111010; /* HTML - background incl. transparent navbar color */
 }
 
 body {
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto !important;
+    background-color: #f8f9fa; /* body - background exl. transparent navbar color */
+    background-image: url('/media/cover/laptop.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
+/*________________________________________________________   FONTS */
+@font-face {
+    font-family: 'TechHeadlines-3Pzp'; /*_____________ BRAND */
+    src: url('/static/font/TechHeadlines-3Pzp.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'JetbrainsMonoMedium-nRvBM'; /*______ NAVBAR */
+    src: url('/static/font/JetbrainsMonoMedium-nRvBM.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'JetbrainsMonoRegular-RpvmM'; /*_____ DROPDOWN */
+    src: url('/static/font/JetbrainsMonoRegular-RpvmM.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TechHeadlinesItalic-8D0M'; /*_______ JUMBATRON */
+    src: url('/static/font/TechHeadlinesItalic-8D0M.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'JetbrainsMonoExtrabold-ywLd5'; /*___ CARD - TITLE */
+    src: url('/static/font/JetbrainsMonoExtrabold-ywLd5.ttf') format('truetype');
+}
+
+
+
+
+
+
+
+
 
 /*_________________________________________________________________________   BASE.HTML - EXTENDS TO ALL TEMPLATES */
 /*_____________________________________________________________   NAVBAR */
+
+.navbar-brand-a { /* Brand */
+    text-decoration: none;
+    font-family: 'TechHeadlines-3Pzp', sans-serif;
+    color: #d51076;
+}
+
+.navbar-brand-a:hover {
+    color: #fff; /* Brand hover color */
+}
+
+.navbar .nav-link {
+    font-family: 'JetbrainsMonoMedium-nRvBM', sans-serif; /* Links (text + icons) */
+    font-size: 14px;
+    color: #d51076;
+}
+
+.navbar .nav-link:hover {
+    color: #fff; /* Icon and text hover color */
+}
+
 .nav-link.dropdown-toggle::after {
-    display: none; /*___________   Remove dropdown arrow */
-}
-
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:hover .fas {
-    color: #FFA500; /*________   Icon Hover Colour */
-}
-
-
-/*______________________________________________  TOP NAVBAR */
-.navbar-nav .nav-link .fas {
-    font-size: 30px; /*__________   Icon Size */
-}
-
-
-/*__________________________________________   BOTTOM NAVBAR */
-
-.nav-icon i {
-    font-size: 24px; /*__________   Icon Size */
-    margin: 0; /*________________   Margin around the icon */
-}
-
-.nav-icon span {
-    font-size: 12px; /*__________   Text Size next to icon */  
+    display: none; /* Removes dropdown arrow */
 }
 
 .dropdown-item {
-    font-size: 12px; /*__________  Text Size in dropdown Note: Affect top navbar also */ 
+    font-family: 'JetbrainsMonoRegular-RpvmM', sans-serif; /* Dropdown Text */
+    font-size: 12px;
 }
+
+.dropdown-item:hover {
+    color: #d51076; /* Change dropdown link color on hover */
+}
+
+
+
 
 /*_________________________________________________________________________   INDEX.HTML - HOME PAGE */
 
-/*_____________________________________________________________   JUMBATRON */
+/*_____________________________________________________________   JUMBOTRON */
 .jumbotron {
-    background-color: #42678c;
+    background-color: #000000;
+    background-image: url('/media/cover/laptop.avif');
+    background-size: cover;
+    background-position: center;
     padding: 3rem 1rem;
     margin-bottom: 1rem;
     border-radius: 0.3rem;
+    font-family: 'TechHeadlinesItalic-8D0M', sans-serif;
+    color: #d51076;
 }
+
 
 /*_____________________________________________________________   FEATURED PRODUCT CARDS */
 .card {
-    border: none;
+    border: 1px solid #5e84a9; /* Light gray border */
     transition: transform 0.3s;
 }
   
@@ -81,14 +130,15 @@ body {
     font-size: 1rem;
     margin-bottom: 1rem;
 }
+
 /*______________________________________________  CARD-BUTTON */
 
 .btn-primary {
-    background-color: #007bff !important;
+    background-color: #007bff !important; /* Primary button color */
     border-color: #007bff !important;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3 !important;
+    background-color: #0056b3 !important; /* Darker shade on hover */
     border-color: #0056b3 !important;
 }
