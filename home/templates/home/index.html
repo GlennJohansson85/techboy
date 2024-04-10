@@ -1,4 +1,4 @@
-<!----------------------------------------------------------------------TECHBOY/HOME/TEMPLATES/HOME/INDEX.HTML-->
+<!--------------------------------------------------------------------  TECHBOY/HOME/TEMPLATES/HOME/INDEX.HTML  -->
 {% extends 'base.html' %}
 
 {% block title %}Home - TechBoY{% endblock %}
@@ -10,62 +10,66 @@
   <a class="btn btn-primary" href="#" role="button">Shop Now</a>
 </div>
 
-<!-- Featured Products -->
-<div class="row mb-4">
-  <div class="col-md-6">
-    <div class="card text-center">
-      <div class="card-body">
-        <h5 class="card-title">TV</h5>
-        <p class="card-text">Discover our latest collection of TVs.</p>
-        <img src="/media/tv/sony/A95K/tv_a95l_1.png" alt="TV Image">
-        <a href="#" class="btn btn-primary">Shop Now</a>
+<!---------------------------------------------------------  FEATURED PRODUCTS  -->
+<!----------------------------------------------  product TV, 1/2 top  -->
+<div class="card-container">
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <div class="card text-center">
+        <img src="/media/tv/Samsung/oled/oled.png" alt="TV Image" class="card-img">
+        <div class="card-body">
+          <h5 class="card-title">TV</h5>
+          <p class="card-text">Discover our latest collection of TVs.</p>
+          <a href="#" class="btn btn-primary">Shop Now</a>
+        </div>
+      </div>
+    </div>
+<!----------------------------------------------  product laptop, 1/2 top  -->
+    <div class="col-md-6">
+      <div class="card text-center">
+        <img src="/media/laptop/apple/macbook/apple_laptop.avif" alt="Laptop Image" class="card-img">
+        <div class="card-body">
+          <h5 class="card-title">Laptop</h5>
+          <p class="card-text">Explore our range of high-performance laptops.</p>
+          <a href="#" class="btn btn-primary">Shop Now</a>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-md-6">
-    <div class="card text-center">
-      <div class="card-body">
-        <h5 class="card-title">Laptop</h5>
-        <p class="card-text">Explore our range of high-performance laptops.</p>
-        <img src="/media/laptop/asus/zenbook_duo/zenbook_duo_4.png" alt="Laptop Image">
-        <a href="#" class="btn btn-primary">Shop Now</a>
+<!----------------------------------------------  product mobile, 1/3 bottom  -->
+  <div class="row mb-4">
+    <div class="col-md-4">
+      <div class="card text-center">
+        <img src="/media/mobile/apple/iphone14-black-half.png" alt="Mobile Image" class="card-img">
+        <div class="card-body">
+          <h5 class="card-title">Mobile</h5>
+          <p class="card-text">Discover accessories to complement your devices.</p>
+          <a href="#" class="btn btn-primary">Shop Now</a>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-
-<!-- Additional Featured Products -->
-<div class="row mb-4">
-  <div class="col-md-4">
-    <div class="card text-center">
-      <div class="card-body">
-        <h5 class="card-title">Mobile</h5>
-        <p class="card-text">Discover accessories to complement your devices.</p>
-        <img src="/media/mobile/sony/Xperia_1V/xperia_1v_1.png" alt="Mobile Image">
-        <a href="#" class="btn btn-primary">Shop Now</a>
+<!----------------------------------------------  product camera, 1/3 bottom  -->
+    <div class="col-md-4">
+      <div class="card text-center">
+        <img src="/media/camera/sony/vintage/sony_dark_dim.png" alt="Camera Image" class="card-img">
+        <div class="card-body">
+          <h5 class="card-title">Camera</h5>
+          <p class="card-text">Capture your moments with our top-quality cameras.</p>
+          <a href="#" class="btn btn-primary">Shop Now</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card text-center">
-      <div class="card-body">
-        <h5 class="card-title">Camera</h5>
-        <p class="card-text">Capture your moments with our top-quality cameras.</p>
-        <img src="/media/camera/sony/a6400/A6400_1.png" alt="Camera Image">
-        <a href="#" class="btn btn-primary">Shop Now</a>
+<!----------------------------------------------  product game, 1/3 bottom  -->
+    <div class="col-md-4">
+      <div class="card text-center">
+        <img src="/media/gaming/sony/ps5/console/ps5-pink-purple.png" alt="Gaming Image" class="card-img">
+        <div class="card-body">
+          <h5 class="card-title">Gaming</h5>
+          <p class="card-text">Latest games</p>
+          <a href="#" class="btn btn-primary">Shop Now</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card text-center">
-      <div class="card-body">
-        <h5 class="card-title">Gaming</h5>
-        <p class="card-text">Immerse yourself in the world of gaming with our gaming products.</p>
-        <img src="/media/gaming/sony/ps5/console/ps5_1.png" alt="Gaming Image">
-        <a href="#" class="btn btn-primary">Shop Now</a>
-      </div>
-    </div>
-  </div>
 </div>
 
 <!-- Reviews -->
