@@ -1,34 +1,59 @@
 /*__________________________________________________________________________________   TECHBOY/STATIC/CSS/BASE.CSS */
 /*_____________________________________________________________________   OVERALL */
 html {
-    background-color: #363636;
     background: linear-gradient(to right, #000000, #264a5c, #264a5c, #000000);
     background-size: cover; 
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
 }
 
 body {
     max-width: 1200px;
     margin: 0 auto !important;
-    background-color: #000!important; /* body - background exl. transparent navbar color */
+    background-color: #000!important;
 }
 
+h1 { /* Jumbatron */
+    font-family: 'TechHeadlinesItalic-8D0M';
+    letter-spacing: 1px;
+    color: #fff!important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
 
+h5 { /* Product Card Title */
+    font-family: 'TechHeadlines-3Pzp';
+    letter-spacing: 1px;
+    color: #fff!important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+h6 { /* price tag */
+    font-family: 'TechHeadlines-3Pzp';
+    letter-spacing: 2px;
+    color: #ffc401!important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+h7 { /* Button */
+    font-family: 'TechHeadlinesItalic-8D0M';
+    letter-spacing: 1px;
+    color: #faf7f7!important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
 
 /*________________________________________________________   FONTS */
 @font-face {
-    font-family: 'TechHeadlines-3Pzp'; /*_____________ BRAND */
+    font-family: 'TechHeadlines-3Pzp'; /*_____________ BRAND - H1 */
     src: url('/static/font/TechHeadlines-3Pzp.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'JetbrainsMonoMedium-nRvBM'; /*______ NAVBAR */
-    src: url('/static/font/JetbrainsMonoMedium-nRvBM.ttf') format('truetype');
+    font-family: 'JetbrainsMonoExtrabold-ywLd5'; /*______ NAVBAR */
+    src: url('/static/font/JetbrainsMonoExtrabold-ywLd5.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'JetbrainsMonoRegular-RpvmM'; /*_____ DROPDOWN */
-    src: url('/static/font/JetbrainsMonoRegular-RpvmM.ttf') format('truetype');
+    font-family: 'JetbrainsMonoBold-51Xez'; /*______ DROPDOWN */
+    src: url('/static/font/JetbrainsMonoBold-51Xez.ttf') format('truetype');
 }
 
 @font-face {
@@ -37,39 +62,34 @@ body {
 }
 
 @font-face {
-    font-family: 'Headlines-Bold'; /*___ CARD - Button */
-    src: url('/static/font/Headlines-Bold.otf') format('truetype');
+    font-family: 'Headlines-SemiBold'; /*___ none*/
+    src: url('/static/font/Headlines-SemiBold.otf') format('truetype');
 }
-
-
-
-
-
-
-
 
 
 /*_________________________________________________________________________   BASE.HTML - EXTENDS TO ALL TEMPLATES */
 /*_____________________________________________________________   NAVBAR */
 
 .navbar-brand-a { /* Brand */
+    color: #d5d5d5;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     text-decoration: none;
     font-family: 'TechHeadlines-3Pzp', sans-serif;
-    color: #d51076;
 }
 
 .navbar-brand-a:hover {
-    color: #fff; /* Brand hover color */
+    color: #d51076; /* Brand hover color */
 }
 
 .navbar .nav-link {
-    font-family: 'JetbrainsMonoMedium-nRvBM', sans-serif; /* Links (text + icons) */
+    font-family: 'JetbrainsMonoExtrabold-ywLd5', sans-serif; /* Links (text + icons) */
     font-size: 14px;
-    color: #d51076;
+    color: #d5d5d5;
 }
 
 .navbar .nav-link:hover {
-    color: #fff; /* Icon and text hover color */
+    color: #d51076; /* Icon and text hover color */
 }
 
 .nav-link.dropdown-toggle::after {
@@ -77,7 +97,7 @@ body {
 }
 
 .dropdown-item {
-    font-family: 'JetbrainsMonoRegular-RpvmM', sans-serif; /* Dropdown Text */
+    font-family: 'JetbrainsMonoBold-51Xez', sans-serif; /* Dropdown Text */
     font-size: 12px;
 }
 
@@ -88,14 +108,11 @@ body {
 
 /*_____________________________________________________________   JUMBOTRON */
 .jumbotron {
-    background-color: #000000;
     background-image: url('/media/cover/laptop.avif');
-    background-size: cover;
     background-position: center;
-    padding: 3rem; 
-    margin-bottom: 1rem;
+    padding: 4rem; 
+    margin-bottom: 2rem;
     font-family: 'TechHeadlinesItalic-8D0M', sans-serif;
-    color: #fff;
 }
 
 
@@ -109,15 +126,12 @@ body {
     position: relative;
     transition: transform 0.3s;
     border: none!important;
-    padding: 80px;
-    display: flex; /* Use flexbox to align content */
-    flex-direction: column; /* Stack child elements vertically */
-    justify-content: flex-end; /* Align child elements to the bottom */
+    padding: 90px;  
 } 
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5);
 }
 
 .card-img {
@@ -130,34 +144,20 @@ body {
 }
 
 .card-body {
-    position: relative;
     z-index: 1;
-    padding: 20px;
+    font-family: 'JetbrainsMonoExtrabold-ywLd5', sans-serif;
+    text-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.card .card-title {
-    color: #fff; /* Override the color property for card titles */
-}
-
-.card-title,
-.card-text,
-.btn-primary {
-    position: relative;
-    z-index: 2;
-    color: #fff;
-    font-family: TechHeadlines-3Pzp;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    
-}
 /*______________________________________________  CARD-BUTTON */
 
 .btn-primary {
-    background-color: #007bff !important; /* Primary button color */
-    border-color: #007bff !important;
+    background-color: #20815f!important; /* Primary button color */
+    border-color: #fff!important;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3 !important; /* Darker shade on hover */
-    border-color: #0056b3 !important;
+    background-color: #ffc401!important; /* Darker shade on hover */
+    border-color: #20815f!important; 
 }
