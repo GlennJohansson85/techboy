@@ -13,11 +13,7 @@ body {
     background-color: #000!important; /* body - background exl. transparent navbar color */
 }
 
-h5 {
-    font-size: 20px;
-    font-family: JetbrainsMonoMedium-nRvBM;
-    font-color: white; /* not working */
-}
+
 
 /*________________________________________________________   FONTS */
 @font-face {
@@ -41,8 +37,8 @@ h5 {
 }
 
 @font-face {
-    font-family: 'JetbrainsMonoExtrabold-ywLd5'; /*___ CARD - TITLE */
-    src: url('/static/font/JetbrainsMonoExtrabold-ywLd5.ttf') format('truetype');
+    font-family: 'Headlines-Bold'; /*___ CARD - Button */
+    src: url('/static/font/Headlines-Bold.otf') format('truetype');
 }
 
 
@@ -96,10 +92,10 @@ h5 {
     background-image: url('/media/cover/laptop.avif');
     background-size: cover;
     background-position: center;
-    padding: 5rem; 
+    padding: 3rem; 
     margin-bottom: 1rem;
     font-family: 'TechHeadlinesItalic-8D0M', sans-serif;
-    color: #d51076;
+    color: #fff;
 }
 
 
@@ -113,7 +109,11 @@ h5 {
     position: relative;
     transition: transform 0.3s;
     border: none!important;
-}
+    padding: 80px;
+    display: flex; /* Use flexbox to align content */
+    flex-direction: column; /* Stack child elements vertically */
+    justify-content: flex-end; /* Align child elements to the bottom */
+} 
 
 .card:hover {
     transform: translateY(-10px);
@@ -121,8 +121,8 @@ h5 {
 }
 
 .card-img {
-    width: 100%;
-    height: 200px;
+    max-width: 100%;
+    height: 100%; 
     object-fit: cover; 
     position: absolute;
     top: 0;
@@ -133,6 +133,11 @@ h5 {
     position: relative;
     z-index: 1;
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card .card-title {
+    color: #fff; /* Override the color property for card titles */
 }
 
 .card-title,
@@ -140,9 +145,11 @@ h5 {
 .btn-primary {
     position: relative;
     z-index: 2;
+    color: #fff;
+    font-family: TechHeadlines-3Pzp;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
 }
-
-
 /*______________________________________________  CARD-BUTTON */
 
 .btn-primary {
